@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About the Weather App</title>
+  <link rel="shortcut icon" href="forecast.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="section about">
+    <div class="container">
+      <div class="row">
+        {{>header }}
+        <br />
+        <h5 class="about-description">{{ intro }}</h5>
+        <h6 class="about-description">{{ introExtra }}</h6>
+      </div>
+      <div class="row">
+        <div class="columns six api">
+          <h2 class="title api-title text-left">{{ api1Title }}</h2>
+          <h4 class="back-text">01</h4>
+          <p class="api-description">{{ api1Description }}</p>
+          <ul>
+            <li><i class="fas fa-check-square"></i> &nbsp; {{ api1List.item1 }}</li>
+            <li><i class="fas fa-check-square"></i> &nbsp; {{ api1List.item2 }}</li>
+            <li><i class="fas fa-check-square"></i> &nbsp; {{ api1List.item3 }}</li>
+            <li><i class="fas fa-check-square"></i> &nbsp; {{ api1List.item4 }}</li>
+          </ul>
+          <button class="btn-plain">{{ more }}</button>
+        </div>
+        <div class="columns six">
+          <h2 class="title api-title-2 text-left">{{ api2Title }}</h2>
+          <h4 class="back-text">02</h4>
+          <p class="api-description">{{ api2Description }}</p>
+          <p class="api-description">{{ api2extra }}</p>
+          <p class="api-description">{{ api2extra2 }}</p>
+          <button class="btn-plain">{{ more }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer }}
+  <script src="/js/app.js"></script>
+</body>
+</html>

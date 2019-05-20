@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather App</title>
+  <link rel="shortcut icon" href="forecast.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="section main" id="weather-mode">
+    <div class="container">
+      <div class="row">
+        {{>header }}
+        <br />
+        <form class="full-width">
+          <input type="text" class="weather-input" placeholder="type city, country or postal code...">
+          <button class="button btn-weather">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="section forecast"></div>
+  {{>footer }}
+  <script src="/js/app.js"></script>
+</body>
+</html>
